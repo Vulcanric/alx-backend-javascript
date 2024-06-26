@@ -1,0 +1,5 @@
+// Using the spread operator to expand lists and strings
+
+export default function concatArrays(array1, array2, string) {
+  return [...array1, ...array2, ...string];
+}
