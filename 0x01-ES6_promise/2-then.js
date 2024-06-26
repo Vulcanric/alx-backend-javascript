@@ -5,6 +5,5 @@ export default function handleResponseFromAPI(promise) {
       console.log('Got a response from the API');
       return { status: 200, body: 'success' };
     })
-    // If the promise wasn't resolved, return an empty Error object
-    .catch(() => Error); // If the promise didn't get resolved
+    .catch(() => console.error(Error())); // If the promise didn't get resolved
 }
