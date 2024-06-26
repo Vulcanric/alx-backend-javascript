@@ -11,12 +11,12 @@ export default function handleProfileSignup() {
     createUser(),
   ];
 
-  Promise.all(listOfPromises)
+  return Promise.all(listOfPromises)
     .then((listOfResolved) => { // [ uploadPhotoResolveData, createUserResolvedData ]
       const { body } = listOfResolved[0];
       const { firstName, lastName } = listOfResolved[1];
 
       console.log(body, firstName, lastName);
     })
-    .catch(() => console.log('Signup system offline'));
+    .catch(() => console.error('Signup system offline'));
 }
