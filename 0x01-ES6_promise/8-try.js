@@ -1,11 +1,9 @@
 // Throw error
 
 export default function divideFunction(numerator, denominator) {
-  const result = numerator / denominator;
-
-  if (!Number.isFinite(result)) {
+  if (denominator === 0) {
     throw new Error('cannot divide by zero');
   } else {
-    return result;
+    return numerator / denominator;
   }
 }
