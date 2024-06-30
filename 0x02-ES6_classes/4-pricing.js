@@ -1,6 +1,4 @@
 // Implements a new class, Pricing that utilizes class Currency
-import Currency from './3-currency';
-
 export default class Pricing {
   constructor(amount, currency) {
     this._amount = amount;
