@@ -5,7 +5,7 @@
  */
 export default function getListStudentIds(listOfStudents) {
   // List of students is an array of student objects
-  if (typeof listOfStudents !== 'object') {
+  if (!(listOfStudents instanceof Array)) {
     return [];
   }
   return listOfStudents.map(({ id }) => id); // Using obj destructuring to obtain obj id
