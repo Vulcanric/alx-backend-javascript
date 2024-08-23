@@ -1,3 +1,5 @@
-export default function displayMessage(message) {
-  process.stdout.write(message);
+// Simple console.log program
+function displayMessage(message) {
+  process.stdout.write(`${message}\n`);
 }
+module.exports = displayMessage;
